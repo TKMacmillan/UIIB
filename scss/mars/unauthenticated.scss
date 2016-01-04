@@ -1,0 +1,734 @@
+@import '../settings';
+@import '../mixins';
+
+/* This is from the foundation framework. */
+.need-assistance:hover {
+  cursor: pointer;
+}
+.widgetBody .onBoardingInput {
+  float: left;
+}
+button.px-button,
+.px-button {
+  font-family: "HelveticaNeueW02-55Roma", "Helvetica", Helvetica, Arial, sans-serif;  
+}
+.widget h1,
+.widget h2,
+.widget h3,
+.widget h4,
+.widget h5,
+.widget h6 {
+  font-family: "HelveticaNeueW02-55Roma","Helvetica",Helvetica,Arial,sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #222;
+  text-rendering: optimizeLegibility;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;  
+}
+label {
+  font-size: 0.875rem;
+  color: #4d4d4d;
+  cursor: pointer;
+  display: block;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+input[type="checkbox"]+label,
+input[type="radio"]+label {
+  display: inline-block;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 0;
+  vertical-align: baseline;
+}
+.widgetBody.columns {
+  margin-top: 24px;
+  /*
+   * TK:
+   * Padding is copied from LP production.
+   * In px, it does not result in a whole number.
+  */
+  // padding: 0 1.094rem;
+  @include rem(padding, 0 17px);
+  width: 100%;
+}
+
+.ria {
+  clear: both;    
+  padding: 0 1.094rem;
+}
+
+@media all and (min-width: 750px) {
+  .widgetBody.columns {
+    float: left;
+    width: 50%;
+  }
+  .widgetBody.columns.regArea {
+    padding-left: 0;
+  }
+  .widgetBody.columns.loginArea {
+    padding-right: 0;
+  }
+  .ria {
+    padding: 0;
+  }
+}
+
+.widgetBody p {
+  margin-bottom: 1.25rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+  -webkit-appearance: none;
+  background-color: white;
+  font-family: inherit;
+  border: 1px solid #cccccc;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 0.875rem;
+  margin: 0 0 1rem 0;
+  padding: 0.5rem;
+  height: 2.3125rem;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out; }
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="date"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="month"]:focus,
+  input[type="week"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="time"]:focus,
+  input[type="url"]:focus,
+  textarea:focus {
+    box-shadow: 0 0 5px #999999;
+    border-color: #999999; }
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="date"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="month"]:focus,
+  input[type="week"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="time"]:focus,
+  input[type="url"]:focus,
+  textarea:focus {
+    background: #fafafa;
+    border-color: #999999;
+    outline: none; }
+  input[type="text"][disabled], fieldset[disabled] input[type="text"],
+  input[type="password"][disabled], fieldset[disabled]
+  input[type="password"],
+  input[type="date"][disabled], fieldset[disabled]
+  input[type="date"],
+  input[type="datetime"][disabled], fieldset[disabled]
+  input[type="datetime"],
+  input[type="datetime-local"][disabled], fieldset[disabled]
+  input[type="datetime-local"],
+  input[type="month"][disabled], fieldset[disabled]
+  input[type="month"],
+  input[type="week"][disabled], fieldset[disabled]
+  input[type="week"],
+  input[type="email"][disabled], fieldset[disabled]
+  input[type="email"],
+  input[type="number"][disabled], fieldset[disabled]
+  input[type="number"],
+  input[type="search"][disabled], fieldset[disabled]
+  input[type="search"],
+  input[type="tel"][disabled], fieldset[disabled]
+  input[type="tel"],
+  input[type="time"][disabled], fieldset[disabled]
+  input[type="time"],
+  input[type="url"][disabled], fieldset[disabled]
+  input[type="url"],
+  textarea[disabled], fieldset[disabled]
+  textarea {
+    background-color: #dddddd; }
+  input[type="text"].radius,
+  input[type="password"].radius,
+  input[type="date"].radius,
+  input[type="datetime"].radius,
+  input[type="datetime-local"].radius,
+  input[type="month"].radius,
+  input[type="week"].radius,
+  input[type="email"].radius,
+  input[type="number"].radius,
+  input[type="search"].radius,
+  input[type="tel"].radius,
+  input[type="time"].radius,
+  input[type="url"].radius,
+  textarea.radius {
+    border-radius: 3px; }
+
+input[type="submit"] {
+  -webkit-appearance: none; }
+
+.instructor-access-widget .instructor-access-course-description,
+.instructor-access-widget .instructor-access-course-form {
+  width: 100%;
+}
+.instructor-access-widget .instructor-access-course-description {
+  margin-bottom: .875rem;
+}
+@media all and (min-width: 750px) {
+  .instructor-access-widget .instructor-access-course-description {
+    margin: 0;
+    width: 50%;
+  }
+  .instructor-access-widget .instructor-access-course-form {
+    width: 42%;
+  }
+  .instructor-access-widget .instructor-access-course-description {
+    float: left;
+  }
+  .instructor-access-widget .instructor-access-course-form {
+    float: right;
+  }  
+}
+.widgetBody .loginLink {
+  margin-right: 1rem;  
+  margin-top: .625rem;
+}
+.widgetBody .loginLink {
+  color: #3199e0;
+}
+.widgetBody #btnLoginContinue {
+  margin-top: 0;
+}
+.widgetBody .loginLink,
+.widgetBody #btnLoginContinue {
+  float: right;
+}
+.widgetBody .widget-login .tryAgain {
+  font-size: .6875rem;
+  text-align: left;
+}
+.widgetBody .widget-login #LoggedInUserLabel {
+  color: #fff;
+  cursor: auto;
+  padding: .3125rem .5625rem;
+  border: 1px solid #fff;
+  margin-bottom: .75rem;
+  overflow: hidden;
+}
+.widgetBody .widget-login #tblAlreadyLoggedIn h2 {
+  margin-bottom: 1.625rem;
+}
+.widgetBody .widget-login .loginFields {
+  @include rem(margin-bottom, 27px);
+}
+
+/* ---------- REGISTRATION ---------- */
+.widgetItem {
+  border: 0;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
+  box-shadow: 0;
+}
+.widget {
+  color: #000;
+  font: 87.5%/1.5em 'Open Sans', sans-serif;
+  padding: 1.5em;
+  width: 100%;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  /* future proofing */
+  -khtml-border-radius: 5px;
+  /* for old Konqueror browsers */
+  /* For IE 6/7 */
+}
+/* TK */
+@media all and (min-width: 750px) {
+  .widget {
+    padding: 1.5em 3.438em 1em;
+  }
+}
+.widget h2 {
+  line-height: 1.5rem;
+  font-size: 1.25rem;
+  text-align: left;
+  font-weight: bold;
+  width: 100%;
+}
+.widget p {
+  line-height: 1.5em;
+  text-align: left;
+}
+.widget p.field_message {
+  font-size: .6875rem;
+  color: #000;
+  text-align: left;
+  /* TK */
+  font-weight: normal;
+  /*
+  display: inline-block;
+  */
+}
+.widget p.field_message.error {
+  color: #e8411a;
+}
+.widget p.field_message {
+  /* TK */
+  margin: 0;
+  margin-bottom: .125rem;
+}
+.widget .clearfix {
+  *zoom: 1;
+}
+.widget .clearfix:before,
+.widget .clearfix:after {
+  display: table;
+  content: "";
+}
+.widget .clearfix:after {
+  clear: both;
+}
+.widget fieldset {
+  border: 0;
+}
+.widget input[type="text"],
+.widget input[type="password"] {
+  margin-bottom: 1em;
+  padding: 0 1em;
+  width: 100%;
+  height: 2rem;
+  font: normal 14px 'Open Sans', Arial, sans-serif;
+  line-height: 2em;
+  background-color: #fff;
+}
+.widget .link-info {
+  font-size: .6875rem;
+  color: #028eda;
+  text-decoration: none;
+}
+p {
+  line-height: 1.5em;
+}
+/* ---------- LOGIN ---------- */
+.widget-login {
+  background: #000;
+  color: #fff;
+  // opacity: 0.8;
+  background: rgba(0, 0, 0 ,.8);
+  @include breakpoint($bp-tablet) {
+    @include rem(min-height, 305px);
+  }
+  @include breakpoint($bp-laptop) {
+    min-height: auto;
+  }  
+}
+.widget-login form {
+  /* tk
+  margin-bottom: 2.25rem;
+  */
+}
+.widget-login h2 {
+  color: darken(#fff, 12%);
+  /*
+  font-size: 2.25em;
+  */
+  font-size: 1.25rem;
+  font-weight: normal;
+  /*
+  line-height: auto;
+  */
+  line-height: 1.5rem;
+  /*
+  TK
+  text-align: center;
+  */
+  margin-bottom: 2.25rem;
+}
+.widget-login fieldset {
+  padding: 0;
+  margin: 0;
+}
+.widget-login fieldset input {
+  height: 50px;
+}
+.widget-login fieldset label {
+  display: none;
+}
+.widget-login fieldset input[type="text"],
+.widget-login fieldset input[type="password"] {
+  background-color: lighten(#000, 10%);
+  border: 1px solid #ccc;
+  border-radius: 0px 3px 3px 0px;
+  color: #ddd;
+  margin-bottom: 1em;
+  padding: 0 16px;
+  width: 100%;
+}
+.widget-login fieldset input[type="text"].invalid,
+.widget-login fieldset input[type="password"].invalid {
+  background-color: #df3029;
+  border-color: red;
+}
+.widget-login fieldset button[disabled] {
+  opacity: .4;
+}
+.widget-login fieldset small.error {
+  color: red;
+  margin: -10px 0 0 0;
+  padding: 0;
+  display: block;
+  text-align: left;
+  background: none;
+  font-style: normal;
+  font-weight: bold;
+}
+.widget-login .ladda-button {
+  @include rem(width, 96px);
+  @include rem(height, 38px);
+  border: 0;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  float: right;
+  background-image: none;
+  background-color: #2bb27a;
+  text-transform: none;
+  padding: 0px;
+}
+.widget-login .ladda-button .ladda-label {
+  color: #000;
+}
+.widget-login .ladda-button.disabled {
+  opacity: .4;
+}
+.widget-login .ladda-button[data-style=expand-left][data-loading] {
+  padding-left: 35px;
+}
+.widget-login p {
+  text-align: center;
+}
+.widget-login p span {
+  padding-left: 5px;
+}
+.widget-login .link-info {
+  opacity: .9;
+}
+.widget-login .link-info,
+.widget-login .link-info span {
+  color: #028eda;
+}
+.widget-login .link-info i,
+.widget-login .link-info span i {
+  color: #028eda;
+}
+.widgetBody .widget-register {
+  background: #fff;
+  min-height: 18.2rem;
+  @include breakpoint($bp-tablet) {
+    @include rem(min-height, 305px);
+  }
+  @include breakpoint($bp-laptop) {
+    min-height: auto;
+  }  
+}
+.widgetBody .widget-register .radio_container {
+  display: block;
+  clear: left;
+  background-color: transparent;
+  border-bottom: 1px solid #cacaca;
+  padding: .75rem 0;
+  /* radio button sub-forms */
+}
+.widgetBody .widget-register .radio_container label {
+  margin-right: 0;
+}
+.widgetBody .widget-register .radio_container:last-of-type {
+  border: 0;
+}
+.widgetBody .widget-register .radio_container input[type="radio"] {
+  display: block;
+  float: left;
+  height: auto;
+  margin: .3rem .5rem .5rem 0;
+}
+.widgetBody .widget-register .radio_container .radioSubForm {
+  clear: left;
+  margin-bottom: -0.1875rem;
+}
+.widgetBody .widget-register .radio_container .radioSubForm input[type="text"],
+.widgetBody .widget-register .radio_container .radioSubForm input[type="password"] {
+  margin: 0;
+  width: 79.5%;
+  /* tk */
+  width: calc(100% - 60px);
+  border: 2px solid $color-submit;
+  border-right: 0;
+  display: inline-block;
+}
+@media all and (min-width: 750px) {
+  .widgetBody .widget-register .radio_container .radioSubForm input[type="text"],
+  .widgetBody .widget-register .radio_container .radioSubForm input[type="password"] {
+    width: 75%;
+  }
+}
+@media all and (min-width: 1024px) {
+  .widgetBody .widget-register .radio_container .radioSubForm input[type="text"],
+  .widgetBody .widget-register .radio_container .radioSubForm input[type="password"] {
+    width: 79.5%;
+  }
+}
+.widgetBody .widget-register .radio_container .radioSubForm button {
+  font-size: 1rem;
+  color: #000;
+  height: 2rem;
+  border: 0;
+  background-image: none;
+  background-color: $color-submit;
+  text-transform: none;
+  border-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  -moz-border-top-right-radius: 3px;
+  -moz-border-bottom-right-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  vertical-align: bottom;
+
+  /* TK */
+  padding: 0 4px;
+  width: auto;  
+}
+/* TK */
+@media all and (min-width: 750px) {
+  .widgetBody .widget-register .radio_container .radioSubForm button {
+    @include rem(padding, 5px);
+    width: 25%;
+  }
+}
+@media all and (min-width: 1024px) {
+  .widgetBody .widget-register .radio_container .radioSubForm button {
+    padding: 0;
+    width: 20.5%;
+  }
+}
+.widgetBody .widget-register .radio_container .radioSubForm button:hover {
+  border: 0;
+  background-color: $color-submit-hover;
+  height: 2rem;
+}
+.widgetBody .widget-register .radio_container .radioSubForm button:active {
+  background-color: $color-submit-active;
+}
+.widgetBody .widget-register .radio_container .radioSubForm .inputButtonWrap {
+  margin-bottom: .5rem;
+  display: block;
+}
+.qtip {
+  background-color: #fff;
+  border-color: #666;
+}
+.qtip .qtip-tip {
+  background-color: #fff;
+  border-color: #666;
+  left: 0px;
+}
+.qtip-registration {
+  max-width: 380px;
+}
+.qtip-login {
+  max-width: 562px;
+}
+.qtip-tipsy {
+  color: #000;
+  font: normal 0.875rem arial, helvetica, sans-serif;
+  line-height: 1.5rem;
+  text-shadow: none;
+  padding: 1.75rem;
+  font-weight: 500;
+}
+.qtip-tipsy a {
+  color: #fff;
+  display: block;
+  margin-top: .25rem;
+}
+.qtip-tipsy a:link {
+  color: #fff;
+}
+.qtip-tipsy li {
+  font-size: .875rem;
+  font-weight: 500;
+}
+.qtip-blue.qtip-tipsy.login_tip {
+  background-color: #3199e0;
+  border-color: #3199e0;
+}
+.qtip-blue.qtip-tipsy.login_tip .qtip-tip {
+  background-color: #3199e0;
+  border-color: #3199e0;
+  height: 10px;
+  width: 10px;
+}
+
+/* Request Instructor Access */
+#cf_inst_access.clearfix {
+  float: none !important;
+  clear: both;
+}
+.widget.instructor-access-widget {
+  background: white;
+  margin: 30px auto;
+  /* TK
+  padding-bottom: 0;
+  */
+}
+.widget.instructor-access-widget h2 {
+  margin-bottom: .875rem;
+}
+.widget.instructor-access-widget div.instructor-access-course-description {
+  padding: 0;
+}
+.widget.instructor-access-widget .instructor-access-course-form {
+/* TK
+  width: 42%;
+*/
+  padding: 0;
+  margin-left: 0;
+}
+@media all and (min-width: 750px) {
+  .widget.instructor-access-widget {
+    padding-bottom: 1.5em;
+  }
+/* TK  
+  .widget.instructor-access-widget .instructor-access-course-form {    
+    margin-left: 3.813rem;    
+  }
+*/
+}
+.widget.instructor-access-widget .instructor-access-course-form input[type="text"],
+.widget.instructor-access-widget .instructor-access-course-form input[type="password"] {
+  margin-bottom: .5em;
+  height: 2rem;
+  width: 88%;
+  border: 1px solid #cbcbcb;
+  float: left;
+}
+.widget.instructor-access-widget .instructor-access-course-form button {
+  color: #000;
+  height: 2rem;
+  border: 0;
+  float: right;
+  background-image: none;
+  background-color: #3199e0;
+  text-transform: none;
+  border-radius: 0 3px 3px 0;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+/* TK
+  width: 12%;
+*/
+  padding: 0;
+}
+/* TK */
+@media all and (min-width: 750px) {
+  .widget.instructor-access-widget .instructor-access-course-form button {
+    width: 12%;
+  }
+}
+.widget.instructor-access-widget .instructor-access-course-form button:hover {
+  border: 0;
+  background-image: none;
+  background-color: #2088d0;
+  height: 2rem;
+}
+.widget.instructor-access-widget .instructor-access-course-form button:active {
+  background-color: #1077c0;
+}
+.widget.instructor-access-widget .instructor-access-course-form .error {
+  clear: left;
+}
+
+/*
+ * The 'current user does not have access to this product' message.
+ * 'NoAccessRow' is the ID.
+*/
+.login-warning-bar-wrapper {
+  background: #f6e33a;
+  border-radius: 5px;
+  margin: 1.5rem 1.094em 0;
+  text-align: center;
+  padding: 16px;
+}
+.login-warning-bar-wrapper div.columns {
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+  text-align: left;  
+}
+.login-warning-bar-wrapper .alert-box { }
+.login-warning-bar-wrapper .alert-box h5 {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0 0 8px 45px;
+  line-height: 1.5;
+}
+.login-warning-bar-wrapper .alert-box p {
+  font-size: 12px;
+  line-height: 160%;
+  margin: 8px 0 0 45px;
+  // color: #4f4f4f;
+}
+.login-warning-bar-wrapper .alert-box .fa {
+  font-size: 27px;
+  position: absolute;
+  color: #000;
+  background-color: #f6e33a;
+  border-color: #f6e33a;
+  top: 0;
+  left: 5px;
+}
+@media all and (min-width: 750px) {
+  .login-warning-bar-wrapper {
+    margin: 1.5rem 0 0;
+  }
+  .login-warning-bar-wrapper .alert-box h5 {
+    font-size: 18px;
+  }
+  .login-warning-bar-wrapper .alert-box p {
+    font-size: 14px;
+  }
+}
+
+/*
+ * Buttons.less
+*/
+button.px-button.large.primary-login,.px-button.large.primary-login {
+  background-color: $color-submit;
+}
+button.px-button.large.primary-login:hover,.px-button.large.primary-login:hover { 
+  background-color: $color-submit-hover;
+}
+button.px-button.large.primary-login:active,.px-button.large.primary-login:active {
+  background-color: $color-submit-active;
+}

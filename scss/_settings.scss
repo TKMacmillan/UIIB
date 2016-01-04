@@ -1,0 +1,68 @@
+/*
+ * Sizes
+*/
+$size-base: 16;
+$size-border-radius: 5px;
+                      // 40px 50px
+$size-padding-content: 30px 56px;
+$size-padding-content-mobile: 25px;
+$size-layout-max-width: 1024px;
+
+$size-header: 27px; // 27
+$size-header-mobile: 20px; 
+$size-header-underline: 2px;
+$size-header-bottom-margin: 25px;
+
+$size-submit-button: 16px;
+$size-submit-button-padding: 10px 20px;
+$size-gutter: 15px;
+
+/*
+ * Colors
+*/
+$color-header-underline: #ec5d2d;
+$color-header-text: #101010;
+
+// The submit button's color is currently green.
+$color-submit: #3ac68b;//#3ac68b;
+$color-submit-hover: #31a573;
+$color-submit-active: #2a9165;
+$color-submit-text: #000;
+
+// TODO: Organize these colors and name them better.
+$color-black: #000;
+$color-charcoal: #777; 
+$color-headline: #555;
+$color-gray: #eee;
+$color-gray-dark: #ccc;
+
+$color-gray-medium-light: #d7d7d7;
+$color-gray-medium-light-hover: #b8b7b7;
+$color-gray-medium-light-active: #8a8a8a;
+
+$color-red-ribbon: #e44525; 
+$color-red-ribbon-hover: #af2d1a;
+$color-red-ribbon-active: #992715;
+
+$color-white: #fff;
+$color-gray-3: #ababab;
+$color-red: #e44525;
+$color-pass: #c5ac2f;
+$color-fail: #dd0087;
+$color-macmillan-blue: #73b1db;
+$color-macmillan-blue-hover: #3e93cd;
+$color-macmillan-blue-active: #2b72a5;
+// The following is from LP's vars.less file.
+$grey-medium-dark: #737373;
+
+/*
+ * Fonts
+*/
+$font-submit-button: 'HelveticaNeueW02-65Medi',Helvetica,Arial,sans-serif;
+
+/*
+ * Breakpoints
+*/
+$bp-tablet: 750px;
+$bp-laptop: 1024px;
+$bp-desktop: 1205px;

@@ -1,0 +1,1142 @@
+@import '../settings';
+@import '../mixins';
+@import 'fonts';
+
+/**, *::before, *::after {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}*/
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+}
+
+/*body
+{
+    font-family: "HelveticaNeueW02-55Roma" , Helvetica, Arial, sans-serif;
+    font-size: .85rem;
+    line-height: 17px;
+    margin: 20px;
+    padding: 0px 25px 0px 35px;
+    color: #666666;
+}*/
+
+.mainBody
+{
+    margin: 0 auto;
+    @include rem(max-width, $size-layout-max-width);
+}
+
+.caption
+{
+    font-family: "HelveticaNeueW02-55Roma", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+}
+.captionBold
+{
+    font-size: .85rem;
+    font-family: "HelveticaNeueW02-55Roma" , Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+.captionAboveBold
+{
+    font-size: .85rem;
+    font-family: "HelveticaNeueW02-55Roma", Helvetica, Arial, sans-serif;
+    height: 25px;
+    vertical-align: bottom
+}
+
+.captionBoldHighlighted
+{
+    font-size: .75rem;
+    font-family: "HelveticaNeueW02-55Roma", Helvetica, Arial, sans-serif;
+    color: #E8411A;
+}
+
+.captionBoldRegistration
+{
+    font-size: 1.2rem;
+    font-family: "HelveticaNeueW02-55Roma" , Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    word-break: break-all;
+    display: inline-block;
+    @include breakpoint($bp-tablet) {
+        word-break: normal;
+        display: inline;
+    }
+}
+
+.pageTitleCell
+{
+    margin: 0;
+    padding: 0 0 5px 0;
+    color: #000000;
+    line-height: 40px;
+    @include rem(padding-bottom, $size-header-bottom-margin);
+}
+
+/* Login */
+.loginTitleCell
+{
+    margin: 0;
+    padding: 0 0 5px 0;
+    color: #ffffff;
+    line-height: 40px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    text-align: left;
+    width: 100%;
+    font-family: "HelveticaNeueW02-55Roma","Helvetica",Helvetica,Arial,sans-serif;
+    font-style: normal;
+}
+
+.loginTable
+{
+    width: 95%;
+    background-color: #000000;
+    @include rem(border-radius, $size-border-radius); 
+    color: #000;
+    font: 87.5%/1.5em "Open Sans",sans-serif;
+    padding: 1.5em 3.438em 1em;
+    width: 100%;
+    border-collapse: separate;
+    font: 87.5%/1.5em "Open Sans",sans-serif;
+    opacity: 0.8;
+}
+
+.loginTableCell
+{
+    height: 35px;
+    vertical-align: middle;
+    padding-top: 0.75rem;
+    text-align: left;
+}
+
+.loginInput
+{
+   background-color: #000;
+    border: 1px solid #ccc;
+    border-radius: 0 3px 3px 0;
+    color: #ddd;
+    margin-bottom: 1em;
+    padding: 0 16px;
+    width: 100%;
+    font: 14px/2em "Open Sans",Arial,sans-serif;
+    height: 2rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+    box-sizing: border-box;
+}
+
+.loginFiller
+{
+    height: 15px;
+}
+
+.error
+{
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    color: red;
+    font-style: normal;
+    font-weight: 700;
+    margin: -10px 0 0;
+    padding: 0;
+    text-align: left;
+    font-size: 0.6875rem;
+    vertical-align: top
+}
+
+.miniLink
+{
+    float: left;
+    color: #028eda;
+    font-size: 0.6875rem;
+    box-sizing: border-box;
+    background: transparent none repeat scroll 0 0;
+    text-decoration: none;
+    opacity: .9;
+}
+
+.miniLink .a:hover
+{
+    text-decoration: none;
+}
+
+.miniLink .a:visited
+{
+    color: #028eda;
+}
+
+.loginLink
+{
+    float: left;
+    color: #028eda;
+    font-size: 0.7rem;
+    box-sizing: border-box;
+    background: transparent none repeat scroll 0 0;
+    text-decoration: none;
+}
+.loginLink .a:visited
+{
+    color: #028eda;
+}
+
+.loginText
+{
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+.loginTextSmall
+{
+    color: #fff;
+    font-size: 0.65rem;
+}
+
+.loginTableCellBorder
+{
+    color: #fff;
+    font-size: 0.75rem;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 1px;
+    height: 30px;
+    padding-left: 15px;
+}
+
+.loginTextBold
+{
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold
+}
+
+/* OnBoarding */
+.onBoardingTable
+{
+    width: 95%;
+    background-color: #ffffff;
+    @include rem(border-radius, $size-border-radius);
+    color: #000;
+    font: 87.5%/1.5em "Open Sans",sans-serif;
+    padding: 1.5em 3.438em 1em;
+    width: 100%;
+    border-collapse: separate;
+    font: 87.5%/1.5em "Open Sans",sans-serif;
+    vertical-align: top;
+}
+
+.onBoardingTitleCell
+{
+    margin: 0;
+    padding: 0 0 5px 0;
+    color: #000000;
+    line-height: 40px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    text-align: left;
+    width: 100%;
+    font-family: "HelveticaNeueW02-55Roma","Helvetica",Helvetica,Arial,sans-serif;
+    font-style: normal;
+}
+
+.onBoardingFieldMessage
+{
+    color: #000;
+    font-size: 0.6875rem;
+    text-align: left;
+}
+
+.onBoardingTableCell
+{
+    height: 15px;
+    vertical-align: central;
+    padding-top: 0.75rem;
+    text-align: left;
+}
+.onBoardingTableCellBottom
+{
+    height: 15px;
+    background-color: transparent;
+    border-bottom: 1px solid #cacaca;
+    clear: left;
+    padding: 0.75rem 0;
+    vertical-align: central
+}
+
+.onBoardingInput
+{
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #3ac68b -moz-use-text-color #3ac68b #3ac68b;
+    border-image: none;
+    border-style: solid none solid solid;
+    border-width: 2px 0 2px 2px;
+    display: inline-block;
+    margin: 0;
+    width: 79.5%;
+    padding: 0 1em;
+    background-color: #fff;
+    font: 14px/2em "Open Sans",Arial,sans-serif;
+    height: 2rem;
+
+}
+
+.onBoardingText
+{
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+    vertical-align: baseline;
+    color: #4d4d4d;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.onBoardingButton
+{
+    background-color: #3ac68b;
+    background-image: none;
+    border: 0 none;
+    border-radius: 0 3px 3px 0;
+    color: #000;
+    font-size: 1rem;
+    height: 2rem;
+    padding: 0;
+    text-transform: none;
+    vertical-align: bottom;
+    width: 20.5%;
+}
+
+
+.infoCircle {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+}
+
+.ladda-button
+{
+    background-color: #3ac68b;
+    border: 0 none;
+    border-radius: 3px;
+    float: right;
+    height: 2rem;
+    padding: 0;
+    text-transform: none;
+    width: 9.563rem;
+    color: #000;
+    cursor: pointer;
+    font-family: "HelveticaNeueW02-55Roma","Helvetica",Helvetica,Arial,sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    outline: medium none !important;
+    transition: none 0s ease 0s ;
+    font-family: "HelveticaNeueW02-55Roma","Helvetica",Helvetica,Arial,sans-serif;
+
+}
+
+.ladda-button[data-style="expand-left"] .ladda-spinner {
+    left: 14px;
+}
+.ladda-button, .ladda-button .ladda-spinner, .ladda-button .ladda-label {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s !important;
+}
+.ladda-button .ladda-spinner {
+    display: inline-block;
+    height: 32px;
+    margin-top: -16px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 2;
+}
+
+/* iSample */
+.iSampleInput
+{
+    border: 1px solid #cbcbcb;
+    float: left;
+    height: 2rem;
+    margin-bottom: 0.5em;
+    width: 88%;
+    background-color: #fff;
+    font: 14px/2em "Open Sans",Arial,sans-serif;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.75);
+    display: block;
+    transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
+    padding: 0 1em;
+    outline: 0 none
+}
+.iSampleButton
+{
+    background-color: #3199e0;
+    background-image: none;
+    border: 0 none;
+    border-radius: 0 3px 3px 0;
+    color: #000;
+    float: right;
+    height: 2rem;
+    padding: 0;
+    text-transform: none;
+    width: 12%;
+    font: 1rem "HelveticaNeueW02-65Medi",Helvetica,Arial,sans-serif;
+}
+
+.alertBoxWarning
+{
+    background-color: #f6e33a;
+    border-color: #f6e33a;
+    color: #000;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 0.8125rem;
+    font-weight: normal;
+    margin-bottom: 1.25rem;
+    padding: 0.875rem 1.5rem 0.875rem 0.875rem;
+    position: relative;
+    transition: opacity 300ms ease-out 0s;
+    cursor: default;
+    font-family: "HelveticaNeueW02-55Roma","Helvetica",Helvetica,Arial,sans-serif;
+    font-style: normal;
+    line-height: 1;
+}
+
+.alertBoxText
+{
+    color: #222;
+    font-family: "HelveticaNeueW02-55Roma","Helvetica",Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizelegibility;
+    cursor: default;
+    text-align: left
+}
+
+/* "iFrame" */
+.MARS_body {
+    color: #666666;
+    font-family: "HelveticaNeueW02-55Roma",Helvetica,Arial,sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    @include rem(padding, $size-padding-content-mobile);
+    background-color: #ffffff;
+    @include rem(border-radius, $size-border-radius);
+    @include rem(margin, $size-gutter+5 $size-gutter);
+    @include breakpoint($bp-tablet) {
+        margin: 20px 0;
+        @include rem(padding, $size-padding-content);
+    }
+}
+
+#termsIframe {
+    @include rem(border-radius, $size-border-radius);
+}
+
+.submitButton,
+.cancelButton {
+ -webkit-font-smoothing: antialiased;
+ -webkit-transition-delay: 0s;
+ -webkit-transition-duration: 0.3s;
+ -webkit-transition-property: all;
+ -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ @include rem(border-radius, $size-border-radius);
+ box-sizing: border-box;
+ box-shadow: none;
+ border-style: none;
+ color: #000000;
+ cursor: pointer;
+ display: inline;
+ height: 38px;
+ letter-spacing: normal;
+ line-height: normal;
+ position: relative;
+ text-align: center;
+ text-indent: 0px;
+ text-shadow: none;
+ text-transform: none;
+ transition: .3s cubic-bezier(.175,.885,.32,1.275)all!important;
+ transition-delay: 0s;
+ transition-duration: 0.3s;
+ transition-property: all;
+ width: auto;
+ word-spacing: normal;
+ font-size: $size-submit-button;
+ font-family: $font-submit-button;
+ font-style: normal;
+ font-variant: normal;
+ font-weight: normal;
+}
+
+.submitButton {
+  background-color: $color-submit;
+  color: $color-submit-text;
+  @include rem(margin, 10px 0 10px 10px);
+  @include rem(padding, $size-submit-button-padding);
+}
+
+.submitButton:hover {
+ background-color: $color-submit-hover;
+}
+
+.submitButton:active {
+ background-color: $color-submit-active;
+}
+
+#Button_Eula_Disagree,
+#Button_Eula_Agree {
+    clear: both;
+    display: block;
+    float: right;
+    margin-right: 0;
+    @include breakpoint($bp-tablet) {
+        clear: none;
+        display: inline;
+        float: none;
+    }
+}  
+#Button_Eula_Agree {
+    @include rem(margin, 10px 0);
+    @include breakpoint($bp-tablet) {
+        @include rem(margin, 10px 0 10px 10px);    
+    }    
+}
+
+.cancelButton {
+  background-color: #d7d7d7;
+  margin: 10px 5px 10px 0px; 
+  @include rem(padding, $size-submit-button-padding);
+}
+
+.cancelButton:hover {
+ background-color: #b8b7b7;
+ color: #000000;
+}
+
+.cancelButton:active {
+ background-color: #8a8a8a;
+ color: #000000;
+}
+
+.ErrorMessage
+{
+    @include rem(border-radius, $size-border-radius);    
+    vertical-align: middle;
+    font-weight: normal;
+    margin: 15px 0px;
+    padding: 15px 55px;
+    background-color: #f5c5bc;
+    color: black;
+    font-size: 1rem;
+    padding: 15px 41px;    
+    @include breakpoint($bp-tablet) {
+        padding: 15px 55px;
+    }
+}
+
+.textBox
+{
+    height: 30px;
+    background-color: #FFFFFF;
+    border: 1px solid #cbcbcb;
+    padding-left: 10px;
+    @include rem(border-radius, $size-border-radius);        
+}
+
+.textBox:focus
+{
+     outline: none;
+     border-color: #cbcbcb;
+     box-shadow: 0 0 10px #cbcbcb;
+ }
+
+.pageTitle
+{
+    @include rem(font-size, $size-header-mobile);
+    font-family: "HelveticaNeueW02-55Roma", Helvetica, Arial, sans-serif;
+    border-bottom: $size-header-underline solid #ec5d2d;
+    display: inline-block;
+    line-height: 1.5;
+    @include breakpoint($bp-tablet) {
+        @include rem(font-size, $size-header);
+    }    
+}
+
+.pageSubTitle
+{
+    font-size: 1rem;
+}
+
+.outerTable
+{
+    width: 100%;
+}
+.outerTable td
+{
+    height: 35px;
+}
+
+.outerTableRegistration
+{
+}
+.outerTableRegistration td
+{
+    height: 35px;
+}
+
+
+.buttonCell
+{
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #CCCCCC;
+    vertical-align: middle;
+    padding-top: 8px;
+    text-align: center;
+}
+
+
+.PseudoLink
+{
+    color: #328188;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: .85rem;
+}
+.PseudoLinkInactive
+{
+    font-family: "HelveticaNeueW02-55Roma", Helvetica, Arial, sans-serif;
+    font-size: .85rem;
+    color: #666666;
+}
+
+.reenterRegistration
+{
+    font-size: .85rem;
+    font-family: "HelveticaNeueW02-55Roma" , Helvetica, Arial, sans-serif;
+    background-color: #e4e5e5;
+    border: 1px solid #cbcbcb;
+    padding-bottom: 15px
+}
+
+
+.Validator
+{
+    color: Red;
+}
+
+/* Join Your Course page. */
+.joinStep {
+  padding: $size-padding-content-mobile;
+  @include breakpoint($bp-tablet) {
+    position: relative;
+  }
+}
+.joinStep .url {
+  word-wrap: break-word;
+}
+.joinStep h1 {
+  line-height: 1;
+  border-bottom: 0.125rem solid #ec5d2d;
+  color: #000;
+  font-weight: normal;
+  display: inline-block;
+  padding: 0 0 0.3125rem 0;
+  margin-bottom: 30px;
+  font-size: $size-header-mobile;
+}
+.joinStep h2 {
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.joinStep h3 {
+  color: #2b72a5;
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.joinStep p {
+  font-size: 16px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+.joinStep a {
+  color: #2b72a5;    
+}
+.joinStep em {
+  font-weight: bold;
+  font-style: normal;
+  color: #000;
+}
+.joinStep img {
+  height: auto;
+  width: 63px;
+  float: left;
+  margin-right: 30px;
+  border: 1px solid #000;
+  display: none;
+}
+.joinStep ul {
+  list-style: none;
+  font-size: 12px;
+}
+.joinStep ul.courses {
+  border: 1px solid #B8B7B7;
+  @include rem(border-radius, $size-border-radius);  
+  padding: 25px 0;
+}
+.joinStep ul li {
+  padding: 0 25px;    
+}
+.joinStep ul ul {
+  display: block;
+  margin: 0; 
+}
+.joinStep ul ul li {
+  color: #737373;
+  display: block;
+  padding: 0;
+  margin-right: 12px;
+  font-weight: bold;
+}
+.joinStep ul ul li em {
+  padding: 0 12px 0 5px;
+}
+.joinStep ul ul li:last-child em {
+  border: 0;
+}
+.joinStep li div {
+  display: inline-block;
+}
+.joinStep p:last-of-type {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #B8B7B7;
+}
+.joinStep button {
+  float: right;
+}
+.joinStep #WaitImage {
+  position: relative;
+  @include breakpoint($bp-tablet) {
+    position: static;
+  }
+  img {
+    position: absolute !important;
+    bottom: -33px !important;
+    left: 0;
+    @include rem(width, 26px);
+    height: auto;
+    border: 0;
+    @include breakpoint($bp-tablet) {
+        left: 50%;
+        top: 50%;
+    }
+  }
+}
+@media all and (min-width: 750px) {
+  .joinStep {
+    padding: $size-padding-content;
+  }
+  .joinStep h1 {
+    font-size: $size-header;
+    margin-bottom: 40px;
+  }
+  .joinStep h2 {
+    margin-bottom: 20px;
+  }    
+  .joinStep h3 {
+    font-size: 18px;
+  }  
+  .joinStep img {
+    display: block;
+  }
+  .joinStep ul.courses {
+    padding: 10px 0;
+  }
+  .joinStep ul.courses li {
+    clear: both;
+  }    
+  .joinStep ul li {
+    padding: 0 30px; 
+  }
+  .joinStep ul ul {
+    margin: 0 0 5px 0;  
+  }  
+  .joinStep ul ul li {
+    display: inline-block;
+  }
+  .joinStep ul ul li em {
+    border-right: 1px solid #737373;    
+  }
+}
+
+#divFindCourse {
+  table {
+    position: relative;
+    width: 100%;
+    #WaitImage {
+        position: absolute;
+        left: 50% !important;
+        top: 50% !important;
+    }
+  }
+  td {
+    @include rem(padding-bottom, $size-gutter);
+    display: block;
+    height: 100%;
+    width: 100%;
+    &.pageTitleCell {
+      display: table-cell;
+      @include rem(padding-bottom, $size-header-bottom-margin);
+    }    
+    @include breakpoint($bp-tablet) {
+      display: table-cell;
+      width: auto;
+    }    
+  }
+  label {
+    display: block;
+    @include rem(margin-bottom, $size-gutter);
+  }
+  #Row1 {
+    div {
+      @include breakpoint($bp-tablet) {    
+        display: inline;
+      }
+    }
+    label {
+      display: inline;
+    }
+  }
+  #Row1 div:last-of-type {
+    margin-top: 15px;
+  }
+  .first {
+    width: 100%;
+    @include breakpoint($bp-tablet) {
+        @include rem(width, 120px);
+    }    
+    @include breakpoint($bp-laptop) {
+        @include rem(width, 160px);
+    }
+  }
+  .middle, #CityDropDown {
+    width: 100%;
+    @include breakpoint($bp-tablet) {
+        @include rem(width, 210px);
+    }    
+    @include breakpoint($bp-laptop) {
+        @include rem(width, 280px);
+    }
+  }
+  .last, #InstitutionDropDown {
+    width: 100%;
+    @include breakpoint($bp-tablet) {
+        @include rem(width, 225px);
+    }    
+    @include breakpoint($bp-laptop) {
+        @include rem(width, 300px);
+    }  
+  }
+}
+
+// This is for the registration page.
+.outerTableRegistration {
+  width: 100%;
+  td {
+    @include rem(padding-bottom, $size-gutter);
+    display: block;
+    height: 100%;
+    width: 100%;
+    @include breakpoint($bp-tablet) {
+      display: table-cell;
+      width: auto;
+    }
+    &.caption {
+        font-size: .85rem;
+        font-weight: bold;
+        @include breakpoint($bp-tablet) {
+            font-weight: normal;
+        }
+        a {
+            font-weight: normal;
+        }
+        span {
+            color: $color-black;
+        }
+    }
+    &.last {
+        padding-bottom: 0;
+    }
+  }
+  #Bfw_MARS_Register_2_EmailValue {
+    word-break: break-all;
+    word-wrap: break-word;
+    display: inline-block;
+    @include rem(margin, 10px 0);
+    clear: both;
+    float: none;
+  }
+  label {
+    display: block;
+    @include rem(margin-bottom, $size-gutter);
+  }
+  .textBox {
+    width: calc(100% - 21px);
+    @include breakpoint($bp-tablet) {
+      width: 240px;
+    }
+  }
+  .reenterRegistration {
+    @include rem(border-radius, $size-border-radius);
+    border: 0;
+    td {
+        padding: $size-gutter $size-gutter 0;
+        &.caption {
+            padding-bottom: 0;
+        }
+    }
+  }
+}
+
+// Existing account found.
+#tdExistingPassword {
+    #Password {
+        width: 100%;
+        @include breakpoint($bp-tablet) {
+            @include rem(width, 300px);
+        }        
+    }
+}
+
+.updateProfile {
+    td {
+        height: auto;
+        @include breakpoint($bp-tablet) {
+            @include rem(padding-bottom, $size-gutter);
+            width: 250px;
+        }
+    }
+    .textBox {
+        @include rem(margin-bottom, $size-gutter);  
+        @include breakpoint($bp-tablet) {
+            margin-bottom: 0;   
+        }
+    }
+    .textBox[readonly]
+    {
+        background-color: $color-gray;
+    }
+    input[type=text] {
+        width: calc(100% - 65px);
+        @include breakpoint($bp-tablet) {
+            @include rem(width, 250px);
+        }        
+    }
+    .captionBold {
+        display: block;
+        @include rem(min-width, 80px);
+        @include rem(height, 30px);     
+        @include breakpoint($bp-tablet) {
+            display: inline-block;
+            float: left;              
+        }
+    }
+    .PseudoLink {
+        display: inline-block;
+        float: right;
+        @include rem(width, 50px);
+        @include rem(margin-left, $size-gutter);
+        @include breakpoint($bp-tablet) {
+            float: none;
+            display: inline;
+        }            
+    }
+    #PasswordCaption {
+        display: inline-block;
+    }
+    table {
+        @include breakpoint($bp-tablet) {
+            // @include rem(margin-top, $size-gutter);
+        }         
+        .captionBold {
+            margin-bottom: 0;
+            @include rem(margin-top, $size-gutter);   
+        }
+    }
+    #RequiredMarker .Validator {
+        @include rem(padding-bottom, 15px);
+    }
+}
+
+.ribbon-widget {
+    margin: 0 1.094rem;    
+    @include breakpoint($bp-tablet) {
+        margin: 0;
+    }
+    .ribbon-widget-contents {
+        border-radius: 5px;
+        margin-top: 25px;
+        overflow: hidden;
+        position: relative;
+        background: #e44525;
+        @include rem(padding, 21px);
+        @include breakpoint($bp-tablet) {
+            @include rem(padding, 10px 48px);
+        }    
+        .ribbon-course-title {
+            line-height: 1;
+            font-weight: 400;
+            font-size: 1.75rem;
+            @include rem(margin-bottom, 8px);
+        }    
+    }
+    .ribbon-course-data {
+        @include rem(font-size, 13px);
+        @include rem(padding-right, 12px);
+        @include rem(margin-bottom, 12px);
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        @include breakpoint($bp-tablet) {
+            float: left;
+            margin-bottom: 0;
+        }
+        span{
+            display: inline-block;
+            font-weight:400;
+            @include rem(padding-left, 4px);
+        }    
+        .ribbon-title-font { 
+            @include rem(margin-right, 5px);
+            color: #fff;
+        }
+        .ribbon-title-value {
+            padding-right: 0;
+        }
+    }    
+}
+
+#Bfw_MARS_Register_1,
+#Bfw_MARS_ForgotPasswordDiv {
+    input#EMail {
+        @include breakpoint($bp-tablet) {
+            @include rem(max-width, 300px);
+        }
+    }
+}
+
+#Bfw_MARS_Activation {
+    td {
+        height: auto;
+        &.caption, &.code {
+            display: block;
+            @include breakpoint($bp-tablet) {
+                display: table-cell;
+                width: 50%;
+            }
+        }
+        &.code {
+            @include breakpoint($bp-tablet) {
+                text-align: right;
+                @include rem(padding-left, $size-gutter); 
+            }
+        }
+        &.captionBold {
+            @include rem(padding-bottom, $size-gutter);
+        }
+    }
+    #Code {
+        @include breakpoint($bp-tablet) {    
+            max-width: 360px;
+        }
+    }
+    #ActivationCode {
+        @include rem(margin-top, 15px);
+        @include breakpoint($bp-tablet) {
+            margin-top: 0;
+        }
+    }
+}
+
+#Bfw_MARS_ResetPassword_Page {
+    td {
+        height: auto;
+        @include rem(min-height, 25px);
+        @include breakpoint($bp-tablet) {
+            height: 35px;
+        }        
+    }
+    .inputContainer,
+    .captionBold,
+    .caption {
+        display: block;
+        width: 100%;
+        @include breakpoint($bp-tablet) {
+            display: table-cell;
+            width: auto;
+        }        
+    }
+    .caption {
+        word-break: break-all;
+    }
+    .textBox {
+        width: 100%;
+        @include breakpoint($bp-tablet) {
+            @include rem(max-width, 250px);
+        }
+    }   
+}
+
+main section#PX_LOGIN_InfoWidget .bookData {
+  span#lblTitle {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+  }
+  #lblTitle {
+    @include rem(font-size, 27px);
+    @include breakpoint($bp-laptop) {
+      @include rem(font-size, 65px);
+    }
+    &.title-short {
+      @include breakpoint($bp-laptop) {
+        @include rem(font-size, 60px);
+      }
+    }
+    &.title-medium {
+      @include breakpoint($bp-laptop) {
+        @include rem(font-size, 56px);
+      }
+    }
+    &.title-big {
+      @include breakpoint($bp-laptop) {
+        @include rem(font-size, 48px);
+      }
+    }
+    &.title-long {
+      @include breakpoint($bp-laptop) {
+        @include rem(font-size, 32px);
+      }
+    }
+  }
+}
+
+@import 'qtip';
+@import '../buttons';
+@import '../dialog';

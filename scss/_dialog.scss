@@ -1,0 +1,244 @@
+.overlayBackground {
+  background: #000;
+  opacity: 0.6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10001;
+}
+.overlayForeground {
+  border-radius: $size-border-radius;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  padding: 0;
+  outline: none;
+  border: none;
+  z-index: 10010;
+  width: 100%;
+  @include breakpoint($bp-tablet) {
+    width: auto;
+    @include rem(min-width, 700px);
+  }
+  &.truncate-title{
+    .ui-dialog-title{
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 95%;
+    }
+  }
+  .ui-dialog-title {
+    margin: 0 16px .1em 0;
+  }
+  .ui-dialog-titlebar {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-radius: $size-border-radius $size-border-radius 0 0;
+      .ui-dialog-title {
+        margin-top: 0;
+      }
+      background: $color-macmillan-blue;
+      font-weight: bold;
+      font-size: 1.4rem;
+
+      @include rem(padding, 12px 24px);
+      @include breakpoint($bp-tablet) {
+        @include rem(padding, 16px 32px 16px 32px);
+      }
+  
+      .fa-times {
+        border: 0;
+        float: right;
+        font-size: 1.7rem;
+        border: 0;
+        box-shadow: none;
+        color: #000;
+        margin: 0;
+        background-color: $color-macmillan-blue;
+        outline: 0;
+        width: 1.125rem;
+        height: 1.125rem;        
+        &:before {
+          position: relative;
+          bottom: 5px;
+        }        
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .ui-button-text {
+        display: block;
+        text-indent: -9999999px;
+      }
+/*
+      .ui-dialog-titlebar-close {
+        &:before {
+          font-family: FontAwesome;
+          // content: "\e60f";
+          margin-right: .5rem;
+          position: relative;      
+        }       
+      }
+*/
+  }
+
+  .content {
+    @include rem(padding, 24px 22px);
+    @include breakpoint($bp-tablet) {
+      @include rem(padding, 32px 30px);
+    }
+    h1, h5 {
+      @include rem(font-size, 26px);
+      font-weight: bold;
+      display: inline-block;
+      word-wrap: break-word;
+      width: 100%;
+      @include breakpoint($bp-tablet) {
+        @include rem(font-size, 35px);
+      }     
+    }
+    .bookData {
+      display: table-cell;
+      width: 100%;
+      @include breakpoint($bp-tablet) {
+        display: inline-block;
+        @include rem(width, 460px);
+      }
+    }    
+    .info-cover-small {
+      margin-top: 0;
+      @include rem(margin-right, 22px);
+      @include rem(max-width, 100px);
+      border: 1px solid #000 !important;
+      float: left;      
+      @include breakpoint($bp-tablet) {
+        @include rem(margin-right, 30px);
+        @include rem(max-width, 144px);
+      }      
+    }    
+    .info-subtitle1, .sub1 {
+      font-weight: normal;
+      @include rem(font-size, 16px);
+      @include rem(padding-top, 10px);  
+      display: inline-block;
+      width: 100%;
+      @include breakpoint($bp-tablet) {
+        @include rem(font-size, 22px);
+      }
+    }
+    .info-subtitle2, .sub2 {
+      font-weight: normal;
+      @include rem(font-size, 16px);
+      display: inline-block;
+      width: 100%;
+      @include breakpoint($bp-tablet) {
+        @include rem(font-size, 22px);
+      }      
+    }
+    .indiv_auth, span div {
+      font-weight: normal;
+      display: inline-block;
+      width: 100%;
+      @include rem(margin-top, 10px);
+    }
+    p {
+      line-height: 1.5em;
+    }
+    .imgPublisher, #imgPublisher {
+      display: none;
+    }
+  }
+
+  .buttonContainer {
+    @include rem(margin, 0 22px 24px);
+    @include rem(padding-top, 24px);
+    @include breakpoint($bp-tablet) {
+      @include rem(margin, 0 30px 32px);
+      @include rem(padding-top, 24px);
+    }
+    border-top: 1px solid $color-gray-dark;
+    clear: both;
+    button {
+      background-color: $color-macmillan-blue;
+      &:hover {
+        background-color: $color-macmillan-blue-hover;
+      }
+      &:active {
+        background-color: $color-macmillan-blue-active;
+      }
+      transition: .3s cubic-bezier(.175,.885,.32,1.275) all;
+    }
+  }  
+
+  /* close buttons */
+  /*  
+  .ui-dialog-titlebar-close {
+    outline: none;
+    .ui-icon{
+      background-image: url('../../../../../Content/images/ui-icons_222222_256x240.png');
+      &:hover {
+        background-image: url('../../../../../Content/images/ui-icons_ffffff_256x240.png');
+      }
+    }
+    //For FireFox
+    &.ui-state-hover .ui-icon{
+      &:before {}   
+      background-image: url('../../../../../Content/images/ui-icons_ffffff_256x240.png');
+    }
+    span {
+      margin-left: -8px;
+      margin-top: -8px;
+    }
+  }
+  */
+
+  button.ui-button {
+
+    float: right;
+
+    &.medium-blue{
+      color: black;
+      background-color: $color-macmillan-blue !important;
+      &:hover{
+        background-color: $color-macmillan-blue-hover !important;
+      }
+    }
+    &.medium-light-grey {
+      color: black;
+      background-color: $color-gray-medium-light !important;
+      &:hover{
+        background-color: $color-gray-medium-light-hover !important;
+      }
+    }
+
+    &.medium-red{
+      color: #fff !important;
+      background-color: $color-red-ribbon !important;
+      &:hover{
+        background-color: $color-red-ribbon-hover !important;
+      }
+    }
+    background-color: inherit; 
+  }
+}
+
+//Create gradebook category dialog
+.create-new-category-dialog {
+  .ui-dialog-titlebar-close {
+    display: none;
+  }
+  input[type="button"]{
+    margin-top: 10px;
+    &.primary{
+      margin-right: 10px;
+    }
+  }
+}

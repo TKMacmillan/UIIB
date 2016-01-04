@@ -1,0 +1,797 @@
+@import '../settings';
+@import '../mixins';
+
+/* ================================
+  Page
+================================ */ 
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#pageWrapper {
+  /* width: 1024px; */ /* 1000px */
+  margin: auto 17px; /* 30px auto */
+  padding: 20px 0 0 0; /* 0*/
+  /*min-width: 1000px; */
+  @include breakpoint($bp-tablet) {
+    margin: auto;
+  }
+}
+
+/* ================================
+  Page Title
+================================ */ 
+
+#titleWrapper {
+  clear: both;
+  padding: 0px 55px;
+  margin: 10px 0;
+}
+
+#titleWrapper h1 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid #ec5d2d;
+  color: #000000;
+  font-weight: normal;
+  margin: 0;
+  padding: 0 0 5px 0;
+  display: inline;
+}
+
+.RA_FormMainTitle {
+  @include rem(font-size, $size-header-mobile);
+  border-bottom: $size-header-underline solid #ec5d2d;
+  color: $color-header-text;
+  font-weight: normal;
+  display: inline-block;
+  line-height: 1.5;
+  @include rem(font-size, $size-header-mobile);
+  @include breakpoint($bp-tablet) {
+    @include rem(font-size, $size-header);
+  }       
+}
+
+/* ================================
+  Header and Footer
+================================ */ 
+
+#headerWrapper,
+#footerWrapper {
+  clear: both;
+  padding: 15px 55px;
+  vertical-align: top;
+  background-color: #d7d7d7;
+  min-height: 24px;
+}
+
+#headerLogo {
+    color: white;
+    font-size: 18pt;
+    background-color: black;
+    margin: 0;
+    padding: 14px 40px;
+    display: inline-block;
+    vertical-align: middle;
+    height: auto;
+    border: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+img.info-cover-small {
+    border: 2px solid rgba(0,0,0,.5);
+    margin-top: 1.5rem;
+    margin-right: 1.75rem;
+    float: left;
+    height: 10.63rem;
+}
+
+/* ================================
+  Content
+================================ */ 
+
+#contentWrapper {
+  clear: both;    
+  margin: 0 auto;
+  padding: 3px 0px;
+  min-height: 250px;
+  background-color: #ffffff;
+}
+
+#registrationWrapper,
+#supportWrapper,
+#loginWrapper {
+  padding: 0px 55px;
+}
+
+#introWrapper {
+  padding: 15px 55px 15px 55px;
+}
+
+#loginCommandWrapper,
+#regCommandWrapper {
+  /*background-color: #ffffff;*/
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #cccccc;
+  clear: both;
+  float: right;
+  text-align: right;
+  width: 100%;
+}
+
+#loginCommandWrapper {
+  height: 40px;
+}
+
+div.buttonWrapper {
+  padding: 0px 55px;
+}
+
+div.notfound {
+  float: right;
+}
+
+#contentMain {
+  line-height: 1.3rem; /* office redesign value was 1.5rem */
+}
+
+#ctl00_content_responseMessage {
+  margin: 15px 55px;
+    display: block;
+}
+
+#ctl00_content_litErrorMessage,
+#acknowledgementWrapper {
+  margin: 15px 0px;
+}
+
+#acknowledgementWrapper {
+  padding: 0 55px;
+  font-size: 1rem;
+}
+
+#ctl00_content_panelLanding {
+  margin: 0px 0px 15px 0px;
+  padding: 20px 145px 25px 145px;
+  font-size: 1rem;
+    background-color: #f6e33a;
+    color: black;
+}
+
+#ctl00_content_panelLanding h5 {
+  font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0px;
+    padding: 5px 0px 10px 0px;
+}
+
+#errContainer {
+  padding: 15px 55px;
+  font-size: 1rem;
+  background-color: #f5c5bc;
+  color: black;
+}
+
+#warningContainer {
+    padding: 15px;
+    font-size: 1rem;
+    background-color: #f5c5bc;
+    color: black;
+}
+
+#infoContainer {
+  padding: 0px 55px;
+  font-size: 1rem;
+  /*background-color: #ffffff;*/
+  color: black;
+}
+
+#academicWrapper {
+  border: 1px solid #cccccc;
+  padding: 5px 10px 10px 10px;
+  margin: 5px 0px 5px 0px;
+}
+
+/* ================================
+  Elements
+================================ */ 
+
+a,
+a:hover {
+  color: #368cd5;
+  text-decoration: none;
+}
+
+input[type="text"],
+input[type="password"] {
+  /* margin-bottom: .5em;
+  height: 2rem; */
+  border: 1px solid #cbcbcb;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #cbcbcb;
+  box-shadow: 0 0 10px #cbcbcb;
+}
+
+input[type="radio"] {
+  margin-top: 12px;
+  display: block;
+  font-size: 1rem;
+  color: #666666;
+}
+
+input {
+  font-size: 1rem;
+  background-color: #ffffff;
+  padding: 3px;
+  color: #666666;
+}
+
+select {
+  font-size: 0.75rem;
+  background-color: #ffffff;
+  padding: 2px;
+  color: #666666;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition-delay: 0s;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+div {
+  border: 0px none #ffffff;
+  padding: 0px;
+}
+  
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+  
+label {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 1.15rem;
+}
+  
+h3 {
+  font-size: 1rem;
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* ================================
+  Classes
+================================ */ 
+
+.productName {
+  color: #666666;
+  font-weight: bold;
+}
+
+.smallBlock {
+  padding-left: 125px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+.small2Block {
+  padding-left: 75px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+p.intro {
+  padding: 10px 0px;
+}
+
+p.formFld * {
+  vertical-align: middle;
+}
+
+p.formFld a,
+p.formFld a:hover {
+  color: #368cd5;
+  text-decoration: none;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+a.dnf,
+a.dnf:hover {
+  margin-top: 15px;
+  color: #368cd5;
+  text-decoration: none;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+div.labelInline * {
+  /* float: left;
+  clear: both;  */
+  display: inline-block;
+}
+
+.wrapWithInput {
+  clear: left;
+  float: left;
+  margin-left: 80px;
+  padding-left: 10px;
+}
+
+.validation {
+  margin-left: 80px;
+  padding-left: 10px;
+  margin-top: -10px;
+}
+
+#securityWrapper div.validation,
+#ctl00_content_lstInstitution_Error div.validation,
+#ctl00_content_lstDepartment_Error div.validation,
+#ctl00_content_cmbPosition_Error div.validation  {
+  padding: 0px;
+  margin: 0px 0px 10px 0px;
+}
+
+.fldLabel {
+  float: left;
+  width: 80px;
+  height: 35px;
+  text-align: right;
+  padding-right: 10px;
+  font-size: 0.7rem;
+  line-height: 1.05rem;
+}
+
+.fldLabelBlock {
+  margin-top: 15px;
+  font-size: 0.7rem;
+  line-height: 1.05rem;
+}
+
+.fldInput input.text {
+  float: right;
+  white-space: nowrap;
+}
+
+#ctl00_content_emailPref {
+  clear: both;
+  float: left;
+  padding: 0px 80px 0px 90px;
+  text-align: left;
+  font-size: 0.7rem;
+  line-height: 1.05rem;
+}
+
+#ctl00_content_emailPref label {
+  font-size: 0.7rem;
+  line-height: 1.05rem;
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+#ctl00_content_emailPref input[type="checkbox"] {
+    margin: 0px;
+    width: 13px;
+    height: 13px;
+    padding: 0px;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+.fldSelect {
+  float: right;
+  width: 330px;
+}
+
+.fldError {
+  vertical-align: top;
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+  color: #cc0000;
+  font-weight: normal;
+}
+
+.fldErrorClear {
+  clear: both;
+  vertical-align: top;
+  margin-top: 0;
+  padding-top: 0;
+  margin-left: 80px;
+  padding-left: 10px;
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+  color: #cc0000;
+  font-weight: normal;
+}
+  
+.fldError span {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  padding-left: 3px;
+}
+
+.inlineInstruction,
+.inlineLabel {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+/*  .instructorNormal { background-color: #f6e33a; }
+    .instructorHover { background-color: #e2cc0b; }
+    .instructorActive { background-color: #d0bb06; } */
+
+/* ================================
+  Specific Elements
+================================ */ 
+
+/* #regCommandWrapper, */
+#acknowledgementWrapper,
+#registrationWrapper,
+#cityWrapper,
+#schoolListWrapper,
+#deptListWrapper,
+#positionListWrapper,
+#securityWrapper,
+#triggerWrapper {
+  display: none;
+}
+
+/* ================================
+  Buttons
+================================ */ 
+
+.divSearchButtons {
+  text-align: right;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.lnkButton,
+.lnkCancel {
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition-delay: 0s;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline;
+  font-family: 'Helvetica Neue Medium', Helvetica, "Arial Bold", Arial, sans-serif; /* 'HelveticaNeueW02-65Medi' */
+  @include rem(font-size, 16px);
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-transform: none;
+  transition: .3s cubic-bezier(.175,.885,.32,1.275)all!important;
+  transition-delay: 0s;
+  transition-duration: 0.3s;
+  transition-property: all;
+  width: auto;
+  word-spacing: normal;
+  @include rem(padding, $size-submit-button-padding);
+}
+
+.lnkButton {
+  background-color: #3ac68b;
+  margin: 10px 0 10px 10px;
+  padding: 10px 20px;
+}
+
+.lnkButton:hover {
+  background-color: #31a573;
+  color: #000000;
+}
+
+.lnkButton:active {
+  background-color: #2a9165;
+  color: #000000;
+}
+
+.lnkCancel {
+  background-color: #d7d7d7;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+@media screen and (min-width: 750px) {
+.lnkCancel {
+  margin: 0 10px 0 0;
+}
+}
+
+.lnkCancel:hover {
+  background-color: #b8b7b7;
+  color: #000000;
+}
+
+.lnkCancel:active {
+  background-color: #8a8a8a;
+  color: #000000;
+}
+
+#btnCheckOutNow {
+  float: none;
+}
+
+@media screen and (min-width: 750px) {
+  #btnCheckOutNow {
+    float: right;
+    margin-left: 20px;
+  }
+}
+
+/* ================================
+  Technical Support
+================================ */ 
+
+#supportWrapper {
+  clear: both;
+  margin-top: 0px;
+  padding: 0px 55px 10px 55px;
+}
+
+#showSupport {
+  padding: 20px 0 10px 0;
+}
+
+#tblSupport {
+  margin-top: 12px;
+  padding: 10px 15px;
+  border: 0 none #ffffff; 
+  outline: #a6a6a6 solid 1px;
+}
+
+#tblSupport td.content {
+  width: 50%;
+  vertical-align: top;
+  padding-right: 40px;
+}
+
+#tblSupport td.close {
+  vertical-align: top;
+  text-align: right;
+  float: right;
+  padding: 0px;
+  margin: -5px -13px 0 0;
+}
+
+#tblSupport h4 {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+#phoneSupport {
+  margin-top: 8px;
+}
+
+.gateway {
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.gatewayLast {
+  border-bottom: 0px solid #ffffff;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+/* ================================
+  For two-columns
+================================ */ 
+
+.col1of2 {
+  float: left;
+  width: 50%;
+}
+
+.col2of2 {
+  float: right;
+  width: 50%;
+}
+
+.col2of2b {
+  float: right;
+  width: 45%;
+}
+
+.clear {
+  clear: both;
+}
+
+/* ================================
+  For icons
+================================ */ 
+
+span.lpIconClosable,
+span.lpIcon {
+  font-size: 1rem;
+  vertical-align: baseline;
+}
+
+span.lpIconSmall {
+  font-size: 0.8rem;
+  padding-right: 2px;
+  vertical-align: 8%;
+}
+
+span.lpIconClosable {
+  cursor: pointer;
+}
+
+/* ================================
+  Specific input fields
+================================ */ 
+
+#ctl00_content_txtUserEmail,
+#ctl00_content_txtFName,
+#ctl00_content_txtLName,
+#ctl00_content_lblUserEmail,
+#ctl00_content_txtCity,
+#ctl00_content_txtNewEmail,
+#ctl00_content_txtRepEmail {
+  width: 250px;
+}
+
+#ctl00_content_txtNewPwd,
+#ctl00_content_txtConfirmNewPwd,
+#ctl00_content_txtPhoneNo,
+#ctl00_content_txtZipCode,
+#ctl00_content_txtPassword,
+#ctl00_content_txtRepUsername,
+#ctl00_content_txtRepPwd {
+  width: 150px;
+}
+
+#ctl00_content_lblUserEmail {
+  font-weight: 600;
+}
+
+/* ================================
+  Clickable tooltips
+================================ */ 
+
+#tooltipIntl {
+    color: #028eda;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+.ui-widget-content a {
+  color: #fff;
+  text-decoration: underline;
+    font-weight: bold;
+}
+
+.ui-widget-content {
+  border: 1px solid #3199e0;
+  background: #3199e0 url(images/ui-bg_flat_75_ffffff_40x100.png)/*{bgImgUrlContent}*/ 50%/*{bgContentXPos}*/ 50%/*{bgContentYPos}*/ repeat-x/*{bgContentRepeat}*/;
+  color: #000;
+  text-shadow: none;
+  padding: 0.9rem;
+  max-width: 280px;
+  font-weight: bold;
+}
+
+.ui-widget {
+  font: 10pt arial,helvetica,sans-serif;
+    font-weight: bold;
+}
+
+.shoppingCart {
+  .columnSpace {
+    display: none;
+    @include breakpoint($bp-tablet) {
+      display: table-cell;
+    }
+  }
+  .cartList {
+    display: none;
+    @include breakpoint($bp-tablet) {
+      display: table;
+    }    
+    .CartCellWrap {
+      width: auto;
+      max-width: none;
+      @include breakpoint($bp-tablet) {
+        @include rem(width, 175px);
+      }
+    } 
+    .RA_formText {
+      display: inline-block;
+      width: 100%;
+      @include breakpoint($bp-tablet) {
+        display: table-row;
+      }      
+    }  
+    .CartCellNoWrap {
+      display: block;
+      @include breakpoint($bp-tablet) {
+        display: table-cell;
+      }
+    } 
+  }
+  .viewResources, .viewCart {
+    display: inline-block;
+    @include rem(margin-top, 10px);
+    @include breakpoint($bp-tablet) {
+      display: none;
+    }    
+  }
+}
+
+.secondaryOptions {
+  #btnCancel {
+    @include rem(margin-bottom, 10px);
+    @include breakpoint($bp-tablet) {
+      margin-bottom: 0;
+    }    
+  }
+}
+
+main section#PX_LOGIN_InfoWidget .bookData {
+  h1 {
+    font-size: 2em;
+  }
+  span#lblTitle {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+  }
+  #lblTitle {
+    @include rem(font-size, 27px);
+    @include breakpoint($bp-laptop) {
+      @include rem(font-size, 65px);
+    }  
+    &.title-short {
+      @include breakpoint($bp-laptop) {
+        @include rem(font-size, 60px);
+      }
+    }
+    &.title-medium {
+      @include breakpoint($bp-laptop) {
+        @include rem(font-size, 56px);
+      }
+    }
+    &.title-big {
+      @include breakpoint($bp-laptop) {
+        @include rem(font-size, 48px);
+      }
+    }
+    &.title-long {
+      @include breakpoint($bp-laptop) {
+        @include rem(font-size, 32px);
+      }
+    }
+  }
+}
+
+@import '../dialog';
+@import '../buttons';

@@ -1,0 +1,1034 @@
+@import '../settings';
+@import '../mixins';
+
+/* ================================
+  Page
+================================ */ 
+
+#pageWrapper {
+  width: 64rem;
+  margin: 0.9375rem auto auto;
+
+  background-color: #ffffff;
+  border-radius: 0.3125rem;
+}
+
+#reactPageMain #pageWrapper {
+  width: auto;
+  border-radius: $size-border-radius;  
+  @include rem(max-width, $size-layout-max-width);
+  @include rem(margin, $size-gutter+5 $size-gutter);
+  @include rem(padding, $size-padding-content-mobile);
+  @include breakpoint($bp-tablet) {
+    margin: 20px auto;
+    @include rem(padding, $size-padding-content);    
+  }  
+} 
+
+/* ================================
+  Page Title
+================================ */ 
+
+#titleWrapper {
+  clear: both;    
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding-bottom: $size-gutter + 10px;
+}
+
+#titleWrapper h1 {
+  border-bottom: $size-header-underline solid #ec5d2d;
+  color: $color-header-text;
+  font-weight: normal;
+  display: inline-block;
+  line-height: 1.5;
+  @include rem(font-size, $size-header-mobile);
+  @include breakpoint($bp-tablet) {
+    @include rem(font-size, $size-header);
+  }    
+} 
+
+/* ================================
+  Content
+================================ */
+
+#contentWrapper {
+  clear: both;    
+  margin: 0 auto;
+  padding: 0.1875rem 0 0 0;
+  background-color: #ffffff;
+}
+
+@media screen and (min-width: 46.875rem) {
+  #contentWrapper {
+    border-bottom-left-radius: 0.9375rem;
+    border-bottom-right-radius: 0.9375rem;
+  }
+}
+
+#registrationWrapper,
+#supportWrapper,
+#loginWrapper {
+  padding: 0.3125rem 0 1.25rem 0;
+}
+
+@media all and (min-width: 46.875rem) {
+  #registrationWrapper,
+  #supportWrapper,
+  #loginWrapper {
+    padding: 0.3125rem 0 1.25rem 0;
+  }
+}
+
+#introWrapper {
+  font-size: 1rem;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+#regCommandWrapper {
+  background-color: #ffffff;
+  display: inline;
+  margin-top: 1.563rem;
+  padding-top: 0.9375rem;
+  border-top: 0.0625rem solid #cccccc;
+  clear: both;
+  float: right;
+  text-align: right;
+  width: 100%;
+}
+
+#loginCommandWrapper {
+  background-color: #ffffff;
+  display: inline;
+  clear: both;
+  float: right;
+  text-align: right;
+  width: 100%;
+}
+
+@media screen and (min-width: 46.875rem) {
+  #loginCommandWrapper {
+    border-bottom-left-radius: 0.9375rem;
+    border-bottom-right-radius: 0.9375rem;    
+  }
+}
+
+div.buttonWrapper {
+  float: right;
+}
+
+@media screen and (min-width: 46.875rem) {
+  div.buttonWrapper {
+  }
+}
+
+div.notfound {
+  float: right;
+}
+
+#contentMain {
+  line-height: 1.5rem;
+}
+
+#ctl00_content_responseMessage {
+    display: block;
+}
+
+#ctl00_content_litErrorMessage {
+  margin: 0.9375rem 0;
+}
+
+#acknowledgementWrapper {
+  padding: 0 1.063rem;
+  font-size: 1rem;
+}
+
+@media all and (min-width: 46.875rem) {
+  #acknowledgementWrapper {
+    padding: 0 3.438rem;
+  }
+}
+
+#ctl00_content_panelLanding {
+  margin: 0.9375rem 0;
+  padding: $size-gutter;
+  background-color: #f6e33a;
+  color: black;
+  border-radius: $size-border-radius;
+  font-size: 1rem;  
+}
+
+@media all and (min-width: 46.875rem) {
+  #ctl00_content_panelLanding {
+    margin: .9375rem 3.4375rem;
+    padding: 1.25rem 7.813rem 1.563rem 7.813rem;
+  }
+}
+
+#ctl00_content_panelLanding h5 {
+  font-size: 0.875rem;  
+  font-weight: bold;
+  margin: 0;
+  padding: 0.3125rem 0 0.625rem 0;
+}
+
+#errDirective {
+    margin: .9375rem;
+  font-size: .75rem;
+  color: black;
+}
+
+@media screen and (min-width: 46.875rem) {
+  #errDirective {
+    font-size: 1rem;
+    margin: .234375rem 3.4375rem 1.875rem 3.4375rem;
+  color: #777777;
+  }
+}
+
+#errContainer {
+  padding: 0.625rem;
+  margin: .9375rem;
+  font-size: 1rem;
+  background-color: #f5c5bc;
+  color: black;
+  border-radius: 0.3125rem;
+}
+
+@media screen and (min-width: 46.875rem) {
+  #errContainer {
+    padding: 0.9375rem 3.438rem;    
+    margin: .9375rem 3.4375rem;
+    border-radius: 0.3125rem;
+  }
+}
+
+#warningContainer {
+    padding: 0.9375rem;
+    font-size: 1rem;
+    background-color: #f5c5bc;
+    color: black;
+}
+
+#infoContainer {
+  padding: 0 3.438rem;
+  font-size: 1rem; 
+  /*background-color: #ffffff;*/
+  color: black;
+}
+
+#academicWrapper {
+  border: 0.0625rem solid #cccccc;
+  padding: $size-gutter;
+  margin: 0.3125rem 0 0.3125rem 0;
+}
+
+/* ================================
+  Elements
+================================ */ 
+
+a,
+a:hover {
+    color: #368cd5;
+  text-decoration: none;
+}
+
+label {
+  margin-bottom: 0;
+  @include rem(font-size, 14px);
+  @include breakpoint($bp-tablet) {
+    @include rem(font-size, 16px);
+  } 
+}
+
+/* --- begin: from BookBag --- */
+input,
+select,
+#ctl00_content_lblUserEmail {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 0.0625rem solid #ccc;
+  border-radius: $size-border-radius;
+  -webkit-box-shadow: inset 0 0.0625rem 0.0625rem rgba(0,0,0,.075);
+  box-shadow: inset 0 0.0625rem 0.0625rem rgba(0,0,0,.075);
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+input:focus,
+select:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 0.0625rem 0.0625rem rgba(0,0,0,.075), 0 0 0.5rem rgba(102, 175, 233, .6);
+  box-shadow: inset 0 0.0625rem 0.0625rem rgba(0,0,0,.075), 0 0 0.5rem rgba(102, 175, 233, .6);
+}
+
+input:-moz-placeholder,
+select:-moz-placeholder {
+  color: #999;
+}
+
+input::-moz-placeholder,
+select::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+input:-ms-input-placeholder,
+select:-ms-input-placeholder {
+  color: #999;
+}
+
+input::-webkit-input-placeholder,
+select::-webkit-input-placeholder {
+  color: #999;
+}
+
+input[disabled],
+input[readonly],
+fieldset[disabled] input,
+select[disabled],
+select[readonly],
+fieldset[disabled] select {
+  cursor: not-allowed;
+  background-color: #eee;
+  opacity: 1;
+}
+/* --- end: from BookBag --- */
+
+div {
+  border: 0 none #ffffff;
+  padding: 0;
+}
+  
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  box-sizing: border-box;
+  color: rgb(54, 57, 64);
+  display: block;
+    font-size: 1.5rem;
+}
+
+#gateway_input_existing > div.col1of2,
+#gateway_input_new > div.col1of2,
+#gateway_input_rep > div.col1of2,
+#gateway_input_existing > div.col2of2,
+#gateway_input_new > div.col2of2,
+#gateway_input_rep > div.col2of2 {
+  /*
+  padding-left: 1.875rem;
+  */  
+}
+
+#registrationWrapper > div.col1of2 > h3 {
+  /*display: none;*/
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  /*color: #000000;*/
+    line-height: 1.5rem;
+    font-size: 1.25rem;
+    text-align: left;
+    font-weight: 700;
+    width: 100%;
+}
+
+#radiusWrapper p:empty,
+#radiusWrapper > p > span > br {
+  display: none;
+}
+
+/* ================================
+  Classes
+================================ */ 
+
+.productName {
+  color: #666666;
+  font-weight: bold;
+}
+
+.smallBlock {
+  padding-left: 7.813rem;
+}
+
+.small2Block {
+    padding: 1.563rem 3.438rem;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+}
+
+p.intro {
+  padding: 0.625rem 0;
+}
+
+.formFld {
+  margin: 0 auto;
+}
+
+a.dnf,
+a.dnf:hover {
+  margin-top: 0.9375rem;
+}
+
+div.labelInline * {
+  display: inline;
+}
+
+#ctl00_content_linkForgotPassword {
+  font-size: .8125rem;
+  margin-top: .9375rem;
+}
+
+.wrapWithInput {
+  clear: left;
+  float: left;
+}
+
+.validation {
+  float: left;
+  margin: 0;
+  padding: 0;
+  font-size: .75rem;
+  font-size: .75rem;  
+}
+
+@media screen and (min-width: 46.875rem) {
+  .validation {
+    margin-left: 5.9375rem;
+    position: relative;
+    top: -.3125rem;
+  }
+}
+
+#gateway_input_new .validation,
+#gateway_input_rep .validation,
+#gateway_input_existing .validation { 
+  clear: both;
+}
+
+#securityWrapper div.validation  {
+  padding: 0;
+  margin: .9375rem 0 0.625rem 0;
+}
+
+.fldLabel {
+  color: rgb(54, 57, 64);
+  display: block;
+  clear: both;
+  padding: 0.75rem 0 0.25rem 0;
+}
+
+.fldSelect {
+  float: right;
+  width: 330px;
+}
+
+#gateway_input_existing .fldLabel,
+#gateway_input_new .fldLabel,
+#gateway_input_rep .fldLabel {
+  display: inline-block;
+  float: left;
+  font-size: .75rem;
+  text-align: right;
+  @include breakpoint($bp-tablet) {
+    min-height: 50px;
+    width: 80px;
+  }
+}
+
+#gateway_input_existing .fldInput,
+#gateway_input_existing .fldInput input,
+#gateway_input_new .fldInput,
+#gateway_input_new .fldInput input,
+#gateway_input_rep input[type=password],
+#gateway_input_rep input[type=text] {
+  clear: none;
+  margin: 0;  
+  padding: .1875rem;
+  @include breakpoint($bp-laptop) {
+    float: left;
+  }
+}
+
+/*
+ * The following input markup is not consistent
+ * with the #gateway_input_rep form.
+*/
+#gateway_input_existing .fldInput,
+#gateway_input_new .fldInput {
+  padding: 0;
+}
+
+@media screen and (min-width: 46.875rem) {
+  #gateway_input_existing .fldInput,
+  #gateway_input_new .fldInput,
+  #gateway_input_rep input[type=password],
+  #gateway_input_rep input[type=text] {
+    margin-left: .9375rem;
+    margin-top: .9375rem;
+    display: inline-block;
+    width: calc(100% - 120px);
+  }
+}
+
+#gateway_input_new .col1of2,
+#gateway_input_new .col2of2,
+#gateway_input_rep .col1of2,
+#gateway_input_rep .col2of2,
+#gateway_input_existing .col1of2,
+#gateway_input_existing .col2of2 {
+  float: none;
+  width: 100%;
+}
+
+@media all and (min-width: 46.875rem) {
+  #gateway_input_new .col1of2,
+  #gateway_input_new .col2of2,
+  #gateway_input_rep .col1of2,
+  #gateway_input_rep .col2of2,
+  #gateway_input_existing .col1of2,
+  #gateway_input_existing .col2of2 {
+    float: left;
+    width: 47%;
+  }
+}
+
+#gateway_input_new .inlineInstruction,
+#gateway_input_rep .inlineInstruction,
+#gateway_input_existing .inlineInstruction {
+  float: left;
+  margin-top: 0.75rem;
+}
+
+@media all and (min-width: 46.875rem) {
+  #gateway_input_new .inlineInstruction,
+  #gateway_input_rep .inlineInstruction,
+  #gateway_input_existing .inlineInstruction {
+    float: none;
+    margin-top: 0;
+  }
+}
+
+.fldLabelBlock,
+#emailPref {
+  clear: both;
+  float: left;
+  text-align: left;
+  margin-top: 0.9375rem;
+  margin-left: 1.875rem;
+  text-indent: -1.875rem;
+}
+
+.fldLabelBlock label {
+  display: inline;
+  padding-left: 0;
+}
+
+#emailPref label {
+  display: block;
+  padding-left: 4.1rem;
+}
+
+#ctl00_content_chkIAccept,
+#ctl00_content_chkOptIn,
+#ctl00_content_chkOptOut,
+#ctl00_content_optRadiusSearch,
+#ctl00_content_optCitySearch {
+  display: inline;
+  min-height: 1.125rem;
+  min-width: 1.125rem;
+  vertical-align: bottom;
+  margin-right: 0.375rem;
+}
+
+#ctl00_content_optCitySearch {
+  margin-left: 0.375rem;
+}
+
+.fldError {
+  vertical-align: top;
+  margin-top: 0;
+  padding-top: 0;
+  color: #cc0000;
+  font-weight: normal;
+}
+
+.fldErrorClear {
+  clear: both;
+  vertical-align: top;
+  margin-top: 0;
+  padding-top: 0;
+  color: #cc0000;
+  font-weight: normal;
+}
+  
+.fldError span {
+  padding-left: 0.1875rem;
+}
+
+span.fldError[style*="inline"]
+{
+  display:block !important;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  padding-left: 0.1875rem;
+}
+
+#securityWrapper #fldError {
+  clear: both;
+}
+
+.inlineInstruction {
+  display: block;
+  clear: both;
+}
+
+.inlineLabel {
+  display: block;
+  clear: both;
+  margin-left: 1.563rem;
+  font-style: normal;
+  font-weight: 100;
+}
+
+.inlineInstruction, .inlineLabel {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+}
+
+/* ================================
+  Specific Elements
+================================ */ 
+
+#acknowledgementWrapper,
+#registrationWrapper,
+#cityWrapper,
+#schoolListWrapper,
+#deptListWrapper,
+#positionListWrapper,
+#securityWrapper,
+#triggerWrapper {
+  display: none;
+}
+
+/* ================================
+  Registration-Page Styles
+================================ */ 
+
+#registrationWrapper h3 {
+  margin-bottom: .75rem;
+}
+
+#registrationWrapper label {
+  font-size: .75rem;
+}
+
+#registrationWrapper .fldLabel {
+  padding-top: 0.75rem;
+  @include breakpoint($bp-tablet) {
+    float: left;
+    width: 80px;
+  }
+}
+
+#registrationWrapper #academicWrapper #schoolListWrapper,
+#registrationWrapper #academicWrapper #deptListWrapper {
+  .fldInput {
+    @include breakpoint($bp-tablet) {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+  .fldLabel {
+    @include breakpoint($bp-tablet) {
+      float: none;
+    }
+  }
+}
+
+#registrationWrapper .fldInput {
+  display: inline-block;
+  width: 100%;
+  float: none;
+  @include breakpoint($bp-tablet) {
+    float: left;
+    margin: 0.9375rem 0 0.9375rem 0.9375rem;    
+    width: calc(100% - 120px);
+  }
+}
+
+#registrationWrapper .col1of2,
+#registrationWrapper .col2of2 {
+  float: none;
+  width: 100%;
+  @include breakpoint($bp-tablet) {
+    float: left;
+    width: 47%;  
+  }
+}
+
+#registrationWrapper .col1of2 {
+  @include rem(padding-bottom, 25px);
+  @include breakpoint($bp-tablet) {
+    padding-bottom: 0;
+  }
+}
+
+#registrationWrapper .col2of2 {
+  @include breakpoint($bp-tablet) {
+    float: right;
+  }
+}
+
+#registrationWrapper .col2of2 .labelInline {
+  padding-bottom: 0.75rem;
+}
+
+#registrationWrapper #divSearchControls {
+  height: auto;
+  padding: 0;
+  text-align: right;
+}
+
+#registrationWrapper #divSearchControls {
+  #ctl00_content_lnkSearchBack,
+  #ctl00_content_lnkSearchSubmit {
+    display: inline-block;
+    float: none;
+    @include rem(margin, 0 0 $size-gutter $size-gutter);
+    @include breakpoint($bp-tablet) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#registrationWrapper #divSearchControls .lnkCancel {
+  @include rem(margin-right, 3px);
+  // margin-left: 15px;
+}
+
+#registrationWrapper #academicWrapper .fldInput {
+  // float: right;
+  @include breakpoint($bp-tablet) {    
+    width: calc(100% - 95px);
+  }
+}
+
+#registrationWrapper #academicWrapper .lnkCancel {
+
+}
+
+#registrationWrapper #schoolListWrapper .validation,
+#registrationWrapper #deptListWrapper .validation,
+#registrationWrapper #positionListWrapper .validation {
+  margin-left: 0;
+  position: static;
+}
+
+/* ================================
+  Buttons
+================================ */ 
+
+.divSearchButtons {
+  display: block;
+  text-align: left;
+  padding: 0 3.438rem;
+  clear: both;
+  width: 100%;
+    /*height: 3.75rem;*/
+}
+
+#divSearchControls {
+  @include rem(margin, 25px 0 0 0);
+}
+
+#proceedFromLogin,
+#proceedFromRegistration,
+#proceedFromRep {
+  margin: .9375rem 0 0;
+  padding: 0;
+}
+
+.lnkButton,
+.lnkCancel {
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition-delay: 0s;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 0.3125rem;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline;
+  font-family: 'Helvetica Neue Medium', Helvetica, "Arial Bold", Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  margin: 0;
+  padding: 0.5rem 1.25rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  transition: .3s cubic-bezier(.175,.885,.32,1.275)all!important;
+  transition-delay: 0s;
+  transition-duration: 0.3s;
+  transition-property: all;
+  width: auto;
+  word-spacing: normal;
+}
+
+.lnkButton {
+  background-color: $color-submit;
+  color: $color-submit-text;
+  float: right;
+  display: block;
+  /*clear: both;*/
+  margin: 0;
+  @include rem(padding, 10px 25px);
+}
+
+.lnkButton:hover {
+  color: $color-submit-text;
+  background-color: $color-submit-hover;
+}
+
+.lnkButton:active {
+  background-color: $color-submit-active;
+}
+
+#divSearchControls .lnkButton {
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+}
+
+.lnkCancel {
+  background-color: #d7d7d7;
+  float: initial;
+  margin: 0 0.9375rem 0 0;
+  @include rem(padding, 10px 25px);
+}
+
+.lnkCancel:hover {
+  background-color: #b8b7b7;
+  color: #000000;
+}
+
+.lnkCancel:active {
+  background-color: #8a8a8a;
+  color: #000000;
+}
+
+#ctl00_content_lnkSearchBack,
+#ctl00_content_lnkRegCancel, 
+#ctl00_content_lnkGatewayCancel {
+  display: inline-block;
+}
+
+/* ================================
+  Technical Support
+================================ */ 
+
+#supportWrapper {
+  clear: both;
+  margin: 1.25rem 1.563rem;
+  padding: 0;
+}
+
+#showSupport {
+  padding: 1.25rem 0 0.625rem 0;
+}
+
+#tblSupport {
+  margin: 0;
+  border: 0 none #ffffff; 
+  outline: #a6a6a6 solid 0.0625rem;
+  width: 100%;
+}
+
+#tblSupport td.content {
+  width: 100%;
+  padding: 0.375rem;
+}
+
+#tblSupport td.close {
+  width: 0.9375rem;
+  text-align: right;
+  vertical-align: top;
+  padding: 0.375rem 0.3125rem 0 0;
+}
+
+#phoneSupport {
+  margin-top: 0.5rem;
+}
+
+.gateway,
+.gatewayLast {
+  clear: both;
+  padding-bottom: 0.625rem;
+  margin-bottom: 0.625rem;
+  border-bottom: 0.0625rem solid #cccccc;
+}
+
+/* ================================
+  For two-columns
+================================ */ 
+
+.col1of2 {
+  float: left;
+  width: 47%;
+}
+
+.col2of2 {
+  float: left;
+  width: 47%;
+}
+
+.clear {
+  clear: both;
+}
+
+/* ================================
+  For LaunchPad icons
+================================ */ 
+
+span.lpIconClosable,
+span.lpIcon {
+  vertical-align: baseline;
+}
+
+span.lpIconSmall {
+  padding-right: 0.125rem;
+  vertical-align: 8%;
+}
+
+span.lpIconClosable {
+  cursor: pointer;
+}
+
+/* ================================
+  Specific input fields
+================================ */ 
+
+#ctl00_content_txtFName,
+#ctl00_content_txtLName,
+#ctl00_content_txtCity,
+#ctl00_content_txtNewPwd,
+#ctl00_content_txtConfirmNewPwd,
+#ctl00_content_txtPhoneNo,
+#ctl00_content_txtZipCode,
+#ctl00_content_cmbRadius,
+#ctl00_content_cmbSchoolType,
+#ctl00_content_cmbCountry,
+#ctl00_content_cmbStateProvince,
+#ctl00_content_cmbPosition,
+#ctl00_content_lblUserEmail,
+#ctl00_content_txtUserEmail,
+#ctl00_content_txtNewEmail,
+#ctl00_content_txtPassword,
+#ctl00_content_txtRepUsername,
+#ctl00_content_txtRepPwd,
+#ctl00_content_txtRepEmail {
+  // clear: both;
+  // float: left;
+  white-space: nowrap;
+  width: 100%;
+  @include breakpoint($bp-laptop) {
+    width: 100%;
+    clear: both;
+    float: left;    
+  }  
+  padding: .1875rem;
+}
+
+/*
+ * Prevent long email addresses from extended beyond the fixed 270px.
+ * TODO: Remove fixed dimensions.
+*/
+span#ctl00_content_lblUserEmail {
+  overflow: hidden;
+}
+
+#ctl00_content_lstInstitution,
+#ctl00_content_lstDepartment {
+  font-size: .75rem;
+  clear: both;
+  float: right;
+  // width: 19.0625rem;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  @include rem(padding, 5px);
+}
+
+#ctl00_content_lstInstitution,
+#ctl00_content_lstDepartment,
+#ctl00_content_cmbPosition {
+  clear: both;
+  float: left;
+}
+
+#ctl00_content_lblUserEmail {
+  background-color: #eee;
+  padding-left: 0.375rem;
+  display: block;
+}
+
+#securityWrapper {
+  margin-top: 1.563rem;
+  margin-bottom: 1.563rem;
+}
+
+main section#PX_LOGIN_InfoWidget .bookData {
+  h1 {
+    font-size: 2em;
+  }
+  span#lblTitle {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+  }
+  #lblTitle {
+    @include rem(font-size, 27px);
+    @include breakpoint($bp-laptop) {
+      @include rem(font-size, 65px);
+    }  
+    &.title-short {
+      @include breakpoint($bp-tablet) {
+        @include rem(font-size, 60px);
+      }
+    }
+    &.title-medium {
+      @include breakpoint($bp-tablet) {
+        @include rem(font-size, 56px);
+      }
+    }
+    &.title-big {
+      @include breakpoint($bp-tablet) {
+        @include rem(font-size, 48px);
+      }
+    }
+    &.title-long {
+      @include breakpoint($bp-tablet) {
+        @include rem(font-size, 32px);
+      }
+    }
+  }
+}
+
+@import '../buttons';
+@import '../dialog';
