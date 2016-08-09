@@ -27,6 +27,12 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 {
     margin: 0 auto;
     @include rem(max-width, $size-layout-max-width);
+    @include breakpoint($bp-tablet) {
+      @include rem(padding, 0 15px);
+    }    
+    @include breakpoint($bp-desktop) {
+      padding: 0;
+    }        
 }
 
 .caption
@@ -1137,6 +1143,105 @@ main section#PX_LOGIN_InfoWidget .bookData {
   }
 }
 
+#toast-container {
+  // position: absolute;
+  @include breakpoint($bp-tablet) {
+    position: fixed;
+    z-index: 999999;
+  }  
+  &>:hover {
+    box-shadow: 0 0 12px #000;
+    opacity: 1;
+    cursor: pointer;
+  }    
+  &.toast-top-right {
+    @include rem(top, 69px);
+    @include rem(margin-left, 17px); 
+    width: calc(100% - 34px); 
+    @include breakpoint($bp-tablet) {
+      @include rem(right, 12px);
+      left: auto;
+      width: auto;                   
+      margin-left: 0;
+    }
+    @include breakpoint($bp-laptop) {
+      @include rem(top, 12px);
+    }
+  }
+  h5 {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    font-weight: normal;
+  }
+  > div {
+    @include rem(margin, 0 0 6px);
+    @include rem(padding, 15px 15px 15px 37px);
+    @include breakpoint($bp-tablet) {
+      @include rem(padding-left, 50px);
+    }
+    @include breakpoint($bp-tablet) {
+      @include rem(width, 300px);
+    }        
+    border-radius: 3px 3px 3px 3px;
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    color: #fff;
+    box-shadow: 0 0 12px #000;
+    opacity: 1;
+    @include breakpoint($bp-laptop) {
+      opacity: .8;
+      box-shadow: 0 0 12px #999;      
+    }
+  }
+  .toast-notification {
+    background-color: #3d9ef2;
+    ul {
+      @include rem(margin-left, 10px);
+      @include rem(margin-bottom, 5px);
+      list-style-type: disc;
+    }
+    li {
+      @include rem(margin-left, 10px);
+      @include rem(margin-bottom, 5px);
+      @include rem(padding-bottom, 10px);    
+      font-size: small;
+      a {
+        word-break: break-all;
+        word-wrap: break-word;
+      }
+    }
+    li:not(:last-child) {
+      border-bottom: solid 1px;    
+    }
+  }
+  .fa-times {
+    background: transparent;
+    border: none;
+    @include rem(height, 30px);
+    position: relative;
+    right: -0.3em;
+    top: -0.3em;
+    float: right;
+    font-size: 1rem;
+    color: #fff;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .8;
+    transition: .4s color;
+    @include breakpoint($bp-laptop) {
+      height: auto;
+    }
+    &:hover, &:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+      opacity: .4;    
+    }
+  }
+}
+
 @import 'qtip';
 @import '../buttons';
 @import '../dialog';
+@import 'password';
